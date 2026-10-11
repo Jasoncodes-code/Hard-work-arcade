@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The neon arcade shelf is open. Pick a game, grab a prize, and stack your points." />
+  <title>Neon Claw Arcade</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Neon Claw Arcade home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>NEON<span class="brand-accent">CLAW</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#games">Games</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#rewards">Rewards</a>
+    </nav>
+    <div class="points-pill" aria-label="Your points">
+      <span class="points-spark" aria-hidden="true">✦</span>
+      <span><strong id="points-value">1,280</strong><small>POINTS</small></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot"></span> ARCADE ONLINE <span class="eyebrow-line"></span></p>
+        <h1 id="hero-title">Pick a game.<br /><em>Catch a prize.</em></h1>
+        <p class="hero-text">Jump into the neon arcade and chase your next high score. Every play earns points toward something shiny.</p>
+        <a class="primary-button" href="#games">PLAY NOW <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-machine" aria-label="Illustration of a neon claw machine">
+        <div class="machine-glow"></div>
+        <div class="machine-topline"></div>
+        <div class="machine-body">
+          <div class="machine-header"><span>PRIZE</span><span>DROP</span><span>★</span></div>
+          <div class="machine-window">
+            <div class="stars"><i>✦</i><i>·</i><i>✧</i><i>·</i></div>
+            <div class="claw-arm"><span class="arm-cable"></span><span class="claw">⌄</span></div>
+            <div class="prize prize-pink">✦</div><div class="prize prize-blue">●</div><div class="prize prize-yellow">★</div><div class="prize prize-purple">◆</div>
+            <div class="machine-floor"></div>
+          </div>
+          <div class="machine-controls"><span class="joystick"><b></b></span><span class="control-dots">● ● ●</span><span class="drop-button">DROP</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="games-section" id="games" aria-labelledby="games-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE GAME FLOOR</p><h2 id="games-title">Choose your <span>challenge</span></h2></div>
+        <p class="game-count">03 GAMES LIVE <span class="status-dot"></span></p>
+      </div>
+      <div class="game-grid">
+        <a class="game-card card-pink" href="game.html?game=neon-claw" target="_blank" rel="noopener">
+          <div class="card-number">01</div><div class="card-art art-claw"><span class="art-spark">✦</span><span class="art-claw-line"></span><span class="art-claw-hook">⌄</span><span class="art-prize">★</span></div>
+          <div class="card-info"><p class="card-tag">SKILL / 1–2 MIN</p><h3>Neon Claw</h3><p>Line up the grab and snag the rarest prize.</p><span class="play-link">PLAY GAME <b>↗</b></span></div>
+        </a>
+        <a class="game-card card-blue" href="game.html?game=prize-wheel" target="_blank" rel="noopener">
+          <div class="card-number">02</div><div class="card-art art-cosmic"><span class="planet planet-one"></span><span class="planet planet-two"></span><span class="orbit"></span><span class="art-spark">✦</span></div>
+          <div class="card-info"><p class="card-tag">LUCK / 1–2 MIN</p><h3>Prize Wheel</h3><p>Spin for a chance at a bright point bonus.</p><span class="play-link">PLAY GAME <b>↗</b></span></div>
+        </a>
+        <a class="game-card card-yellow" href="game.html?game=coin-clicker" target="_blank" rel="noopener">
+          <div class="card-number">03</div><div class="card-art art-rush"><span class="rush-star">★</span><span class="rush-star small">✦</span><span class="rush-ring"></span><span class="rush-bolt">ϟ</span></div>
+          <div class="card-info"><p class="card-tag">SPEED / 1–2 MIN</p><h3>Coin Clicker</h3><p>Tap the coin and earn 10 points every time.</p><span class="play-link">PLAY GAME <b>↗</b></span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="info-strip" id="how-it-works">
+      <div class="info-item"><span class="info-icon">01</span><div><h3>Choose a game</h3><p>Instant access. No waiting around.</p></div></div>
+      <div class="info-item"><span class="info-icon">02</span><div><h3>Play to win</h3><p>Quick games. Big energy. High scores.</p></div></div>
+      <div class="info-item" id="rewards"><span class="info-icon">03</span><div><h3>Stack your points</h3><p>Keep climbing toward the prize wall.</p></div></div>
+    </section>
+
+    <section class="prize-section" id="prizes" aria-labelledby="prize-title">
+      <div class="prize-copy"><p class="eyebrow"><span class="pulse-dot"></span> PRIZE WALL</p><h2 id="prize-title">Turn points into<br /><span>something cuddly.</span></h2><p>Spend 1,000 points to spin the gacha and win a surprise plushie.</p><div class="prize-actions"><button class="shop-button" id="shop-button" type="button">SPIN THE GACHA <b>✦</b></button><a class="collection-button" href="collection.html" target="_blank" rel="noopener">VIEW COLLECTION <b>↗</b></a></div></div>
+      <div class="plush-display" aria-label="Prize wall with plushies"><div class="plush plush-one">🐻</div><div class="plush plush-two">🐰</div><div class="plush plush-three">🐸</div><span class="display-label">1,000 PTS / PRIZE</span></div>
+    </section>
+  </main>
+
+  <div class="prize-modal" id="prize-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-card"><button class="modal-close" id="modal-close" type="button" aria-label="Close prize offer">×</button><p class="eyebrow"><span class="pulse-dot"></span> PLUSHIE GACHA</p><h2 id="modal-title">Spin for a surprise.</h2><p>Use <strong>1,000 points</strong> for one spin. You never know which plushie will drop.</p><button class="shop-button" id="modal-buy" type="button">SPIN FOR PLUSHY <b>✦</b></button><p class="modal-note" id="modal-note">Your wins are saved in your collection.</p></div>
+  </div>
+
+  <footer><span>© 2026 NEONCLAW ARCADE</span><span class="footer-rule"></span><span>READY PLAYER ONE?</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

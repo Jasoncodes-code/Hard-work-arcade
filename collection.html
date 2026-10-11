@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Plushie Collection — Neon Claw</title><link rel="stylesheet" href="styles.css" /></head>
+<body class="collection-page">
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark"><span></span><span></span><span></span></span><span>NEON<span class="brand-accent">CLAW</span></span></a><a class="back-link collection-back" href="index.html">← BACK TO ARCADE</a><div class="points-pill"><span class="points-spark">✦</span><span><strong id="collection-points">0</strong><small>POINTS</small></span></div></header>
+  <main class="collection-screen"><p class="eyebrow"><span class="pulse-dot"></span> YOUR PRIZE WALL</p><h1>PLUSHIE<br /><span>COLLECTION</span></h1><p class="collection-intro">Every gacha drop lives here. Keep playing to collect them all.</p><div class="collection-stats"><strong id="collection-count">0</strong><span>PLUSHIES COLLECTED</span><i></i><strong>06</strong><span>TO FIND</span></div><section class="collection-grid" id="collection-grid" aria-label="Your plushie collection"></section></main>
+  <script>
+    const plushies = { bear:['🐻','Cosmo Bear','pink'], bunny:['🐰','Pixel Bunny','purple'], frog:['🐸','Glow Frog','blue'], panda:['🐼','Byte Panda','yellow'], koala:['🐨','Cloud Koala','pink'], fox:['🦊','Rocket Fox','orange'] };
+    const owned = JSON.parse(localStorage.getItem('neonClawCollection') || '[]'); const grid = document.querySelector('#collection-grid');
+    document.querySelector('#collection-points').textContent = Number(localStorage.getItem('neonClawPoints') || 0).toLocaleString(); document.querySelector('#collection-count').textContent = owned.length;
+    Object.entries(plushies).forEach(([key, plush]) => { const count = owned.filter(item => item === key).length; const card = document.createElement('article'); card.className = 'collection-card ' + (count ? 'collected ' + plush[2] : 'locked'); card.innerHTML = '<div class="collection-art">' + (count ? plush[0] : '?') + '</div><div><p>' + (count ? plush[1] : 'Mystery Plushie') + '</p><small>' + (count ? ('COLLECTED ×' + count) : 'SPIN TO DISCOVER') + '</small></div>'; grid.appendChild(card); });
+  </script>
+</body>
+</html>
